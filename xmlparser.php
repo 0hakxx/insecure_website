@@ -3,7 +3,7 @@
 	$xml = $_POST["xml"];
 
 	if(!empty($xml)){
-		$result = simplexml_load_string($xml);
+        $result = simplexml_load_string($xml, "SimpleXMLElement", LIBXML_NOENT);
 	}
 ?>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
